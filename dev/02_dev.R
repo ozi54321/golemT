@@ -16,15 +16,20 @@
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 usethis::use_package( "thinkr" )
+usethis::use_package( "bs4Dash" )
+usethis::use_package( "shinyWidgets" )
+usethis::use_package( "shinycssloaders" )
+usethis::use_package( "lubridate" )
+usethis::use_package( "keys" )
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module( name = "name_of_module1" ) # Name of the module
+golem::add_module( name = "overview" ) # Name of the module
 golem::add_module( name = "name_of_module2" ) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
-golem::add_fct( "helpers" ) 
+golem::add_fct( "funcs" ) 
 golem::add_utils( "helpers" )
 
 ## External resources
@@ -44,7 +49,7 @@ usethis::use_test( "app" )
 # Documentation
 
 ## Vignette ----
-usethis::use_vignette("golemT")
+usethis::use_vignette("golemT_vig")
 devtools::build_vignettes()
 
 ## Code Coverage----
